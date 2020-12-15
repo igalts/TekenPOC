@@ -20,7 +20,7 @@ const App = () => {
         <div></div>
         <div>
           <DataSearch
-          placeholder="חפש"
+          placeholder="חיפוש מתקדם"
             componentId="search"
             dataField={[
               "text",
