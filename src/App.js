@@ -10,12 +10,11 @@ import "./styles.css";
 
 const App = () => {
   return (
-    <ReactiveBase
-      app="testapp"
-      credentials="2WL1PxmTj:feb08265-a3cd-44bf-8000-5d1415e20ffb"
-      enableAppbase
-      url="https://test-zmwbaqj-arc.searchbase.io"
-    >
+    <ReactiveBase 
+    app="teken" 
+    credentials="gjzJPR8Jy:35b902a6-e056-4303-9caf-47c2152165e4" 
+    enableAppbase 
+    url="https://tekencluster-shofbax-arc.searchbase.io">
       <div className="app">
         <div></div>
         <div>
@@ -149,7 +148,7 @@ const App = () => {
                               </span>
                             </div>
                           </div>
-                          <span className="full_text">Pub {item.text}</span>
+                          <span className="full_text">{item.text}</span>
                         </div>
                       </ResultList.Description>
                     </ResultList.Content>
