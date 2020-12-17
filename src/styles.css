@@ -6,7 +6,6 @@ body {
 asd {
   font-weight: bold;
   background-color: yellow;
-
 }
 
 .app {
@@ -49,7 +48,6 @@ pre {
   max-width: 300px;
   overflow: scroll;
 }
-
 
 @media (max-width: 768px) {
   .app {
