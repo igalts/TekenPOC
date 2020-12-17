@@ -3,6 +3,11 @@ body {
   direction: rtl;
 }
 
+mark {
+  font-weight: bold;
+
+}
+
 .app {
   display: grid;
   grid-template-columns: 1fr;
@@ -44,55 +49,6 @@ pre {
   overflow: scroll;
 }
 
-/******* EXPAND-COLLAPSE STYLES *******/
-.collapse {
-  overflow: hidden;
-  max-height: 200px;
-}
-
-.expand-button-container button {
-  margin: 10px;
-  color: #1890ff;
-  border: 0;
-  background: inherit;
-  cursor: pointer;
-}
-
-.expand-button-container {
-  width: 100%;
-  background: linear-gradient(180deg, #eaeaea, rgba(255, 255, 255, 0.8));
-}
-
-/******* TOOLTIP STYLES *******/
-
-/* Tooltip container */
-.tooltip {
-  position: relative;
-  display: inline-block;
-  border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
-}
-
-/* Tooltip text */
-.tooltip .tooltiptext {
-  visibility: hidden;
-  background-color: black;
-  color: #fff;
-  border-radius: 6px;
-
-  position: absolute;
-  z-index: 1;
-  top: -5px;
-  right: 105%;
-  max-width: 450px;
-  min-width: fit-content;
-  padding: 10px;
-  overflow-x: scroll;
-}
-
-/* Show the tooltip text when you mouse over the tooltip container */
-.tooltip:hover .tooltiptext {
-  visibility: visible;
-}
 
 @media (max-width: 768px) {
   .app {

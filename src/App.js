@@ -19,7 +19,7 @@ const App = () => {
         <div></div>
         <div>
           <DataSearch
-          placeholder="חיפוש מתקדם"
+            placeholder="חפש"
             componentId="search"
             dataField={[
               "text",
@@ -99,23 +99,20 @@ const App = () => {
             ]}
             fuzziness={0}
             queryFormat="and"
+            title="מערכת לחיפוש תקנים"
+            autosuggest={false}
           />
           <SelectedFilters />
           <ReactiveList
             componentId="SearchResult"
             dataField="standard_name"
-            size={3}
+            size={10}
             className="result-list-container"
             pagination
             URLParams
-            highlight
-            highlightFields={[]}
-            highlightOptions={{
-              fragment_size: 100,
-              number_of_fragments: 5,
-              post_tags: ["</mark>"],
-              pre_tags: ["<mark>"]
-            }}
+            highlight={true}
+       
+
             includeFields={["*"]}
             react={{
               and: "search"
