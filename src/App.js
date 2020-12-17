@@ -21,6 +21,8 @@ const App = () => {
           <DataSearch
             placeholder="חפש"
             componentId="search"
+            highlight={true}
+            includeFields={["*"]}
             dataField={[
               "text",
               "text.keyword",
@@ -59,6 +61,7 @@ const App = () => {
               "sub_desc1.lang"
             ]}
             defaultValue=""
+
             enableSynonyms
             fieldWeights={[
               1,
@@ -110,10 +113,29 @@ const App = () => {
             className="result-list-container"
             pagination
             URLParams
-            highlight={true}
-       
-
-            includeFields={["*"]}
+            highlight
+            highlightFields={[
+              'text',
+              'sub_desc1',
+              'sub_desc2',
+              'sub_desc3',
+              'sub_desc4',
+              'sub_num1',
+              'standard_name',
+              'sub_num2',
+              'sub_num3',
+              'sub_num4'
+            ]}
+            highlightOptions={{
+              fragment_size: 100,
+              number_of_fragments: 5,
+              post_tags: [
+                '</asd>'
+              ],
+              pre_tags: [
+                '<asd>'
+              ]
+            }}
             react={{
               and: "search"
             }}
@@ -131,21 +153,23 @@ const App = () => {
                         />
                       </ResultList.Title>
                       <ResultList.Description>
-                        <div className="flex column justify-space-between">
+                        <div 
+                        className="flex column justify-space-between"
+                        >
                           <div>
                             <div>
                               <span className="sub_num_desc">
-                                {item.sub_num1} {item.sub_desc1}
-                                <br></br>
-                                {item.sub_num2} {item.sub_desc2}
-                                <br></br>
-                                {item.sub_num3} {item.sub_desc3}
-                                <br></br>
-                                {item.sub_num4} {item.sub_desc4}
+                                <div dangerouslySetInnerHTML={{__html: item.sub_num1}}/><div dangerouslySetInnerHTML={{__html: item.sub_desc1}}/>
+                                <div dangerouslySetInnerHTML={{__html: item.sub_num2}}/><div dangerouslySetInnerHTML={{__html: item.sub_desc2}}/>
+                                <div dangerouslySetInnerHTML={{__html: item.sub_num3}}/><div dangerouslySetInnerHTML={{__html: item.sub_desc3}}/>
+                                <div dangerouslySetInnerHTML={{__html: item.sub_num4}}/><div dangerouslySetInnerHTML={{__html: item.sub_desc4}}/>
                               </span>
                             </div>
                           </div>
-                          <span className="full_text">{item.text}</span>
+                          <span className="full_text" dangerouslySetInnerHTML={{
+                            __html: item.text
+                          }}>
+                          </span>
                         </div>
                       </ResultList.Description>
                     </ResultList.Content>
@@ -154,6 +178,7 @@ const App = () => {
               </ReactiveList.ResultListWrapper>
             )}
           />
+          
         </div>
       </div>
     </ReactiveBase>
