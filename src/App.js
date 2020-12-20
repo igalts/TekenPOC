@@ -10,14 +10,15 @@ import "./styles.css";
 
 const App = () => {
   return (
+
     <ReactiveBase 
     app="teken" 
     credentials="QoLZO0wRy:06debd62-0bb5-4540-a014-40b843dd44b2" 
     enableAppbase url="https://clusterteken-xrvrpfc-arc.searchbase.io">
       <div className="app">
         <div></div>
-        <div>
-          <DataSearch
+        <div> 
+          <DataSearch className="datasearch"
             placeholder="חפש"
             componentId="search"
             highlight={true}

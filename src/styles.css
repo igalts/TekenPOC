@@ -1,5 +1,5 @@
 body {
-  margin: 0;
+  margin: 10;
   direction: rtl;
 }
 
@@ -9,17 +9,22 @@ asd {
 }
 
 
+.datasearch h2{
+  font-weight: bold;
+  text-align: center;
+  font-size: 50px;
+}
 
 .standard_title
 {
   font-weight: bold;
-  font-size: 20px;
+  font-size: 18px;
   text-decoration: underline;
   }
 
 .desc1{
   font-weight: bold;
-  font-size: 18px;
+  font-size: 17px;
   }
 
 .desc2{
@@ -55,6 +60,7 @@ asd {
   min-width: 250px;
   margin-top: 10px;
 }
+
 
 .item {
   padding: 10px;
