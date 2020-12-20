@@ -8,6 +8,41 @@ asd {
   background-color: yellow;
 }
 
+
+
+.standard_title
+{
+  font-weight: bold;
+  font-size: 18px;
+  text-decoration: underline;
+  }
+
+.desc1{
+  font-weight: bold;
+  font-size: 30px;
+  }
+
+.desc2{
+  font-weight: bold;
+  font-size: 25px;
+  text-indent:3px;
+  }
+
+.desc3{
+  font-weight: bold;
+  font-size: 20px;
+  text-indent: 6px;
+  }
+
+.desc4{
+  font-weight: bold;
+  font-size: 15px;
+  text-indent: 9px;
+  }
+
+
+
+
 .app {
   display: grid;
   grid-template-columns: 1fr;

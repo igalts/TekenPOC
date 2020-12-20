@@ -12,9 +12,8 @@ const App = () => {
   return (
     <ReactiveBase 
     app="teken" 
-    credentials="gjzJPR8Jy:35b902a6-e056-4303-9caf-47c2152165e4" 
-    enableAppbase 
-    url="https://tekencluster-shofbax-arc.searchbase.io">
+    credentials="QoLZO0wRy:06debd62-0bb5-4540-a014-40b843dd44b2" 
+    enableAppbase url="https://clusterteken-xrvrpfc-arc.searchbase.io">
       <div className="app">
         <div></div>
         <div>
@@ -126,6 +125,30 @@ const App = () => {
               'sub_num3',
               'sub_num4'
             ]}
+
+              renderResultStats={
+                function(stats){
+                    return (
+                        `מציג ${stats.displayedResults} מתוך ${stats.numberOfResults} תוצאות`
+                    )
+                }
+                
+            }
+            renderNoResults={
+              function(renderNoResults){
+                  return (
+                      `לא נמצאו תוצאות`
+                  )
+              }
+              
+          }
+          renderError={(error) => (
+            <div>
+                שגיאה, אנא נסה שנית<br/><br/>{error}
+            </div>
+        )
+    }
+            
             highlightOptions={{
               fragment_size: 100,
               number_of_fragments: 5,
@@ -146,7 +169,7 @@ const App = () => {
                     <ResultList.Content>
                       <ResultList.Title>
                         <div
-                          className="book-title"
+                          className="standard_title"
                           dangerouslySetInnerHTML={{
                             __html: item.standard_name
                           }}
@@ -159,17 +182,27 @@ const App = () => {
                           <div>
                             <div>
                               <span className="sub_num_desc">
-                                <div dangerouslySetInnerHTML={{__html: item.sub_num1}}/><div dangerouslySetInnerHTML={{__html: item.sub_desc1}}/>
-                                <div dangerouslySetInnerHTML={{__html: item.sub_num2}}/><div dangerouslySetInnerHTML={{__html: item.sub_desc2}}/>
-                                <div dangerouslySetInnerHTML={{__html: item.sub_num3}}/><div dangerouslySetInnerHTML={{__html: item.sub_desc3}}/>
-                                <div dangerouslySetInnerHTML={{__html: item.sub_num4}}/><div dangerouslySetInnerHTML={{__html: item.sub_desc4}}/>
+                              <div className="desc1">
+                                <span  dangerouslySetInnerHTML={{__html: item.sub_num1}}/> <span dangerouslySetInnerHTML={{__html: item.sub_desc1}} />
+                                </div>
+                                 <div className="desc2">
+                                <span dangerouslySetInnerHTML={{__html: item.sub_num2}}/> <span dangerouslySetInnerHTML={{__html: item.sub_desc2}}/>
+                                </div>
+                                <div className="desc3">
+                                <span dangerouslySetInnerHTML={{__html: item.sub_num3}}/> <span dangerouslySetInnerHTML={{__html: item.sub_desc3}}/>
+                                </div>
+                                <div className="desc4">
+                                <span dangerouslySetInnerHTML={{__html: item.sub_num4}}/> <span dangerouslySetInnerHTML={{__html: item.sub_desc4}}/>
+                                </div>
                               </span>
                             </div>
                           </div>
+                          <div>
                           <span className="full_text" dangerouslySetInnerHTML={{
                             __html: item.text
                           }}>
                           </span>
+                          </div>
                         </div>
                       </ResultList.Description>
                     </ResultList.Content>
