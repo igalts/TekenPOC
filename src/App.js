@@ -60,7 +60,6 @@ const App = () => {
               "sub_desc1.lang"
             ]}
             defaultValue=""
-
             enableSynonyms
             fieldWeights={[
               1,
