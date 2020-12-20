@@ -2,6 +2,7 @@ import React from "react";
 import {
   ReactiveBase,
   ReactiveList,
+  MultiList,
   DataSearch,
   SelectedFilters,
   ResultList
@@ -16,13 +17,14 @@ const App = () => {
     credentials="QoLZO0wRy:06debd62-0bb5-4540-a014-40b843dd44b2" 
     enableAppbase url="https://clusterteken-xrvrpfc-arc.searchbase.io">
       <div className="app">
-        <div></div>
         <div> 
           <DataSearch className="datasearch"
             placeholder="חפש"
             componentId="search"
             highlight={true}
             includeFields={["*"]}
+            showFilter={true}
+            filterLabel="חיפוש"
             dataField={[
               "text",
               "text.keyword",
@@ -103,8 +105,32 @@ const App = () => {
             queryFormat="and"
             title="מערכת לחיפוש תקנים"
             autosuggest={false}
+
           />
           <SelectedFilters />
+          <div>
+
+				</div>
+        <div class="all_body">
+        <div className="filterReslut">
+        <MultiList
+            className="filter"
+            componentId="list-0"
+            dataField="standard_name.keyword"
+            defaultValue={[]}
+            queryFormat="or"
+            filterLabel="סינון"
+            showSearch={false}
+            react={{
+              and: ["search","filter"]
+              }}
+              //showFilter={true}
+                size={5}
+                sortBy="count"
+                title="תקנון\תקן "
+          />
+        </div>
+        <div className="SearchResult">
           <ReactiveList
             componentId="SearchResult"
             dataField="standard_name"
@@ -211,7 +237,8 @@ const App = () => {
               </ReactiveList.ResultListWrapper>
             )}
           />
-          
+            </div>
+        </div>
         </div>
       </div>
     </ReactiveBase>

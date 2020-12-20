@@ -45,8 +45,20 @@ asd {
   text-indent: 9px;
   }
 
+.all_body
+{
+padding-top: 10px;
+display: flex;
+}
 
-
+.SearchResult
+{
+  flex: 10;
+}
+.filterReslut{
+  flex: 1;
+  padding-left: 10px
+}
 
 .app {
   display: grid;
