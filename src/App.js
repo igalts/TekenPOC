@@ -12,19 +12,16 @@ import "./styles.css";
 const App = () => {
   return (
 
-    <ReactiveBase 
-    app="teken" 
-    credentials="QoLZO0wRy:06debd62-0bb5-4540-a014-40b843dd44b2" 
-    enableAppbase url="https://clusterteken-xrvrpfc-arc.searchbase.io">
+		<ReactiveBase app="teken" credentials="M8TP9RvjO:e5ace1c4-b847-49c1-88d6-2afa521ac233" enableAppbase url="https://teken-ycdniyw-arc.searchbase.io">
       <div className="app">
         <div> 
           <DataSearch className="datasearch"
             placeholder="חפש"
             componentId="search"
-            highlight={true}
             includeFields={["*"]}
             showFilter={true}
             filterLabel="חיפוש"
+            debounce={100}
             dataField={[
               "text",
               "text.keyword",
@@ -138,19 +135,6 @@ const App = () => {
             className="result-list-container"
             pagination
             URLParams
-            highlight
-            highlightFields={[
-              'text',
-              'sub_desc1',
-              'sub_desc2',
-              'sub_desc3',
-              'sub_desc4',
-              'sub_num1',
-              'standard_name',
-              'sub_num2',
-              'sub_num3',
-              'sub_num4'
-            ]}
 
               renderResultStats={
                 function(stats){
@@ -175,16 +159,7 @@ const App = () => {
         )
     }
             
-            highlightOptions={{
-              fragment_size: 100,
-              number_of_fragments: 5,
-              post_tags: [
-                '</asd>'
-              ],
-              pre_tags: [
-                '<asd>'
-              ]
-            }}
+
             react={{
               and: "search"
             }}
