@@ -11,7 +11,7 @@ import "./styles.css";
 
 const App = () => {
   const renderImage = (id) => {
-    return id ? <img   width="80%"  src={`https://drive.google.com/uc?export=view&id=${id}`} alt="igals-img" /> : null
+    return id ? <img   width="40%"  src={`https://drive.google.com/uc?export=view&id=${id}`} alt="igals-img" /> : null
   }
   return (
 		<ReactiveBase app="teken" credentials="YzxiiNL84:fb84ab64-e5a8-4d04-8993-663a0d751b4f" enableAppbase url="https://takanon-jyzhkod-arc.searchbase.io">
