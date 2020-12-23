@@ -10,9 +10,11 @@ import {
 import "./styles.css";
 
 const App = () => {
+  const renderImage = (id) => {
+    return id ? <img src={`https://drive.google.com/uc?export=view&id=${id}`} alt="igals-img"/> : null
+  }
   return (
-
-		<ReactiveBase app="teken" credentials="M8TP9RvjO:e5ace1c4-b847-49c1-88d6-2afa521ac233" enableAppbase url="https://teken-ycdniyw-arc.searchbase.io">
+    <ReactiveBase app="teken" credentials="C5GUFgzWk:bb475093-7bf1-4895-8ef5-3c28753ebde6" enableAppbase url="https://clusterteken-ebvavzn-arc.searchbase.io">
       <div className="app">
         <div> 
           <DataSearch className="datasearch"
@@ -30,6 +32,13 @@ const App = () => {
               "text.delimiter",
               "text.synonyms",
               "text.lang",
+              'Meta_text',
+              'Meta_text.autosuggest',
+              'Meta_text.delimiter',
+              'Meta_text.keyword',
+              'Meta_text.lang',
+              'Meta_text.search',
+              'Meta_text.synonyms',
               "sub_desc4",
               "sub_desc4.keyword",
               "sub_desc4.search",
@@ -107,7 +116,7 @@ const App = () => {
           <SelectedFilters />
           <div>
 
-				</div>
+        </div>
         <div class="all_body">
         <div className="filterReslut">
         <MultiList
@@ -135,7 +144,7 @@ const App = () => {
             className="result-list-container"
             pagination
             URLParams
-
+			
               renderResultStats={
                 function(stats){
                     return (
@@ -195,6 +204,7 @@ const App = () => {
                                 <div className="desc4">
                                 <span dangerouslySetInnerHTML={{__html: item.sub_num4}}/> <span dangerouslySetInnerHTML={{__html: item.sub_desc4}}/>
                                 </div>
+                                
                               </span>
                             </div>
                           </div>
@@ -203,6 +213,9 @@ const App = () => {
                             __html: item.text
                           }}>
                           </span>
+                          <div className="image-container">
+                                  {renderImage(item.Images_id)}
+                                </div>
                           </div>
                         </div>
                       </ResultList.Description>
