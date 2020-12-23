@@ -21,7 +21,7 @@ const App = () => {
             includeFields={["*"]}
             showFilter={true}
             filterLabel="חיפוש"
-            debounce={100}
+            debounce={150}
             dataField={[
               "text",
               "text.keyword",
