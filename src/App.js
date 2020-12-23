@@ -14,7 +14,7 @@ const App = () => {
     return id ? <img   width="40%"  src={`https://drive.google.com/uc?export=view&id=${id}`} alt="igals-img" /> : null
   }
   return (
-		<ReactiveBase app="teken" credentials="YzxiiNL84:fb84ab64-e5a8-4d04-8993-663a0d751b4f" enableAppbase url="https://takanon-jyzhkod-arc.searchbase.io">
+		<ReactiveBase app="asdefsvgggd" credentials="IOcVIrMwM:0c0c3f6d-c224-4c84-bf31-2feb3837d97a" enableAppbase url="https://sdasssgfgg-dzvywui-arc.searchbase.io">
       <div className="app">
         <div> 
           <DataSearch className="datasearch"
