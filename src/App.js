@@ -24,6 +24,29 @@ const App = () => {
             showFilter={true}
             filterLabel="חיפוש"
             debounce={150}
+            highlight
+            highlightFields={[
+              'standard_name',
+              'sub_desc1',
+              'sub_desc2',
+              'sub_desc3',
+              'sub_desc4',
+              'text',
+              'sub_num1',
+              'sub_num2',
+              'sub_num3',
+              'sub_num4'
+            ]}
+            highlightOptions={{
+              fragment_size: 0,
+              number_of_fragments: 0,
+              post_tags: [
+                '</mark>'
+              ],
+              pre_tags: [
+                '<mark>'
+              ]
+            }}
             dataField={[
               "text",
               "text.keyword",
@@ -61,6 +84,34 @@ const App = () => {
               "sub_desc2.synonyms",
               "sub_desc2.lang",
               "sub_desc1",
+              'sub_num1',
+              'sub_num1.autosuggest',
+              'sub_num1.delimiter',
+              'sub_num1.keyword',
+              'sub_num1.lang',
+              'sub_num1.search',
+              'sub_num1.synonyms',
+              'sub_num2',
+              'sub_num2.autosuggest',
+              'sub_num2.delimiter',
+              'sub_num2.keyword',
+              'sub_num2.lang',
+              'sub_num2.search',
+              'sub_num2.synonyms',
+              'sub_num3',
+              'sub_num3.autosuggest',
+              'sub_num3.delimiter',
+              'sub_num3.keyword',
+              'sub_num3.lang',
+              'sub_num3.search',
+              'sub_num3.synonyms',
+              'sub_num4',
+              'sub_num4.autosuggest',
+              'sub_num4.delimiter',
+              'sub_num4.keyword',
+              'sub_num4.lang',
+              'sub_num4.search',
+              'sub_num4.synonyms',
               "sub_desc1.keyword",
               "sub_desc1.search",
               "sub_desc1.autosuggest",
@@ -144,7 +195,6 @@ const App = () => {
             className="result-list-container"
             pagination
             URLParams
-			
               renderResultStats={
                 function(stats){
                     return (
