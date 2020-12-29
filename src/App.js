@@ -194,6 +194,12 @@ const App = () => {
             size={10}
             className="result-list-container"
             pagination
+           /*sortOptions={
+              {
+                  dataField: "sub_desc3",
+                  sortBy: "desc"
+              }
+           }*/
             URLParams
               renderResultStats={
                 function(stats){
