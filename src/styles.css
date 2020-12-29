@@ -58,8 +58,9 @@ display: flex;
 }
 .filterReslut{
   flex: 1;
-  padding-left: 10px
+  padding-left: 10px;
 }
+.filterReslut .filter ul { max-height: none }
 
 .app {
   display: grid;
