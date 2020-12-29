@@ -175,7 +175,7 @@ const App = () => {
             componentId="list-0"
             dataField="standard_name.keyword"
             defaultValue={[]}
-            queryFormat="or"
+            queryFormat="and"
             filterLabel="סינון"
             showSearch={false}
             react={{
@@ -226,7 +226,7 @@ const App = () => {
             
 
             react={{
-              and: "search"
+              and: ["search","list-0"]
             }}
             render={({ data }) => (
               <ReactiveList.ResultListWrapper>
