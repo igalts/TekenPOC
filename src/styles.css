@@ -6,15 +6,31 @@ body {
 mark {
   font-weight: bold;
   background-color: yellow;
+  
+}
+
+div.top_bar {
+  display: flex;
+  padding: 10px;
+  background-color: #fff;
+  border-bottom: 1px solid #dce0e0;
+  box-shadow: 0 1px 5px 0 rgba(0,0,0,.1);
+}
+
+img.logo{
+  padding-left: 20px;
+  width: 100%;
+
+}
+div.datasearch{
+  width: 100%;
+}
+
+div.app{
+  padding: 0px;
 }
 
 
-
-.datasearch h2{
-  font-weight: bold;
-  text-align: center;
-  font-size: 50px;
-}
 
 .standard_title
 {

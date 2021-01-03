@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   ReactiveBase,
   ReactiveList,
@@ -9,19 +9,52 @@ import {
 } from "@appbaseio/reactivesearch";
 import "./styles.css";
 
+
+
 const App = () => {
+
+  useEffect(() => {
+    setTimeout(() => {
+      const pagination = document.querySelectorAll(`[class*=pagination] a`)
+      if (pagination && pagination.length) {
+        pagination[0].innerText = "הקודם"
+        pagination[pagination.length - 1].innerText = "הבא"
+
+        
+      } 
+    }, 1000)
+  }, [])
+/* so this almost works - problem 
+  useEffect(() => {
+    setTimeout(() => {
+      const clearAllButton = document.querySelectorAll(`[class*=SelectedFilters] a`)
+      if (clearAllButton && clearAllButton.length) {
+
+        clearAllButton[clearAllButton.length-1].innerText = "נקה הכל"
+
+        
+      } 
+    }, 1000)
+  }, [])*/
+
   const renderImage = (id) => {
     return id ? <img   width="40%"  src={`https://drive.google.com/uc?export=view&id=${id}`} alt="igals-img" /> : null
   }
   return (
-		<ReactiveBase app="asdefsvgggd" credentials="IOcVIrMwM:0c0c3f6d-c224-4c84-bf31-2feb3837d97a" enableAppbase url="https://sdasssgfgg-dzvywui-arc.searchbase.io">
+    <ReactiveBase 
+    app="asdefsvgggd" 
+    credentials="IOcVIrMwM:0c0c3f6d-c224-4c84-bf31-2feb3837d97a" 
+    enableAppbase url="https://sdasssgfgg-dzvywui-arc.searchbase.io">
       <div className="app">
-        <div> 
+        <div className="top_bar"> 
+            <div className="logo">
+              <img  className="logo" src={`https://drive.google.com/uc?export=view&id=163gTVC8jdA2ozXD3FsYFfBbpd3ABu3qs`} alt="logo" />
+            </div>
+          <div className="datasearch">
           <DataSearch className="datasearch"
             placeholder="חפש"
             componentId="search"
             includeFields={["*"]}
-            showFilter={true}
             filterLabel="חיפוש"
             debounce={150}
             highlight
@@ -160,13 +193,14 @@ const App = () => {
             ]}
             fuzziness={0}
             queryFormat="and"
-            title="מערכת לחיפוש תקנים"
+            title=""
             autosuggest={false}
 
           />
-          <SelectedFilters />
-          <div>
-
+          </div>
+        </div > 
+          <div class="SelectedFilters">
+          <SelectedFilters  />
         </div>
         <div class="all_body">
         <div className="filterReslut">
@@ -181,7 +215,6 @@ const App = () => {
             react={{
               and: ["search","filter"]
               }}
-              //showFilter={true}
                 size={5}
                 sortBy="count"
                 title="תקנון\תקן "
@@ -194,12 +227,6 @@ const App = () => {
             size={10}
             className="result-list-container"
             pagination
-           /*sortOptions={
-              {
-                  dataField: "sub_desc3",
-                  sortBy: "desc"
-              }
-           }*/
             URLParams
               renderResultStats={
                 function(stats){
@@ -283,7 +310,7 @@ const App = () => {
           />
             </div>
         </div>
-        </div>
+
       </div>
     </ReactiveBase>
   );
