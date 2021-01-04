@@ -54,6 +54,7 @@ const App = () => {
           <DataSearch className="datasearch"
             placeholder="חפש"
             componentId="search"
+            style={{"background": "rgb(50, 50, 50)"}}
             includeFields={["*"]}
             filterLabel="חיפוש"
             debounce={150}
@@ -198,12 +199,14 @@ const App = () => {
 
           />
           </div>
+          <div className="left_menu">
+          </div > 
         </div > 
           <div class="SelectedFilters">
           <SelectedFilters  />
         </div>
         <div class="all_body">
-        <div className="filterReslut">
+        <div className="right_menu">
         <MultiList
             className="filter"
             componentId="list-0"
