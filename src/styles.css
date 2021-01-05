@@ -49,10 +49,10 @@ div.app{
 
 
 
-.standard_title
+div.standard_title
 {
-  font-weight: bold;
-  font-size: 18px;
+  font-size: 16px;
+  color: #5185f7;
   text-decoration: underline;
   }
 
