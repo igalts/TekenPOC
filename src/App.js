@@ -41,9 +41,9 @@ const App = () => {
   }
   return (
     <ReactiveBase 
-    app="metricbeat-7.10.1-2021.02.04" 
-    credentials="yTXu6ZRFc:b7c51f24-cc24-4c54-8c6f-f851e48dd86b" 
-    enableAppbase url="https://takanon-zrjspve-arc.searchbase.io">
+    app="tknindex" 
+    credentials="Jr0gBhrtl:3f64c19c-2f89-4ecf-93a1-2c5f610f5e77" 
+    enableAppbase url="https://tkn-ngsbhsa-arc.searchbase.io">
       <div className="app">
         <div className="top_bar"> 
             <div className="logo">
