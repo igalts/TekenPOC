@@ -40,10 +40,7 @@ const App = () => {
     return id ? <img   width="40%"  src={`https://drive.google.com/uc?export=view&id=${id}`} alt="igals-img" /> : null
   }
   return (
-    <ReactiveBase 
-    app="tknindex" 
-    credentials="Jr0gBhrtl:3f64c19c-2f89-4ecf-93a1-2c5f610f5e77" 
-    enableAppbase url="https://tkn-ngsbhsa-arc.searchbase.io">
+<ReactiveBase app="teken" credentials="Uanz0LOnR:7e89bb41-60ac-420a-9dfa-da40f73c363b" enableAppbase url="https://tkkn-gsqjwqo-arc.searchbase.io">
       <div className="app">
         <div className="top_bar"> 
             <div className="logo">
