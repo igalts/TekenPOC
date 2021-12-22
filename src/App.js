@@ -23,7 +23,7 @@ const App = () => {
       } 
     }, 1000)
   }, [])
-/* so this almost works - problem 
+/* so this almost works - problem ttt
   useEffect(() => {
     setTimeout(() => {
       const clearAllButton = document.querySelectorAll(`[class*=SelectedFilters] a`)
