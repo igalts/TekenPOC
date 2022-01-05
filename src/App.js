@@ -44,9 +44,9 @@ const App = () => {
   return (
     <ReactiveBase
       app="tekenpoc"
-      credentials="4g6C6L7wQ:c382c9bf-95bb-4d96-9b79-cbcef0c6c8ad"
+      credentials="7JMvpzqHB:d391793a-e0f9-4b15-9cc9-2225347b1e88"
       enableAppbase
-      url="https://wailing-animal-dyjncyj-arc.searchbase.io"
+      url="https://tekenpoc-pthzvms-arc.searchbase.io"
     >
       <div className="app">
         <div className="top_bar">
@@ -70,11 +70,13 @@ const App = () => {
               highlightFields={[
                 "standard_name",
                 "sub_desc1",
+                "sub_desc1a",
                 "sub_desc2",
                 "sub_desc3",
                 "sub_desc4",
                 "text",
                 "sub_num1",
+                "sub_num1a",
                 "sub_num2",
                 "sub_num3",
                 "sub_num4"
@@ -122,6 +124,7 @@ const App = () => {
                 "sub_desc2.synonyms",
                 "sub_desc2.lang",
                 "sub_desc1",
+                "sub_desc1a",
                 "sub_num1",
                 "sub_num1.autosuggest",
                 "sub_num1.delimiter",
@@ -129,6 +132,13 @@ const App = () => {
                 "sub_num1.lang",
                 "sub_num1.search",
                 "sub_num1.synonyms",
+                "sub_num1a",
+                "sub_num1a.autosuggest",
+                "sub_num1a.delimiter",
+                "sub_num1a.keyword",
+                "sub_num1a.lang",
+                "sub_num1a.search",
+                "sub_num1a.synonyms",
                 "sub_num2",
                 "sub_num2.autosuggest",
                 "sub_num2.delimiter",
@@ -155,7 +165,13 @@ const App = () => {
                 "sub_desc1.autosuggest",
                 "sub_desc1.delimiter",
                 "sub_desc1.synonyms",
-                "sub_desc1.lang"
+                "sub_desc1.lang",
+                "sub_desc1a.keyword",
+                "sub_desc1a.search",
+                "sub_desc1a.autosuggest",
+                "sub_desc1a.delimiter",
+                "sub_desc1a.synonyms",
+                "sub_desc1a.lang"
               ]}
               defaultValue=""
               enableSynonyms
@@ -277,6 +293,18 @@ const App = () => {
                                     <span
                                       dangerouslySetInnerHTML={{
                                         __html: item.sub_desc1
+                                      }}
+                                    />
+                                  </div>
+                                  <div className="desc1a">
+                                    <span
+                                      dangerouslySetInnerHTML={{
+                                        __html: item.sub_num1a
+                                      }}
+                                    />{" "}
+                                    <span
+                                      dangerouslySetInnerHTML={{
+                                        __html: item.sub_desc1a
                                       }}
                                     />
                                   </div>

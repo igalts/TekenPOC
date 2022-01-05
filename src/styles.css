@@ -1,12 +1,10 @@
 body {
   direction: rtl;
-
 }
 
 mark {
   font-weight: bold;
   background-color: yellow;
-  
 }
 
 div.top_bar {
@@ -14,89 +12,86 @@ div.top_bar {
   padding: 10px;
   background-color: #fff;
   border-bottom: 1px solid #dce0e0;
-  box-shadow: 0 1px 5px 0 rgba(0,0,0,.1);
+  box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.1);
 }
 
-img.logo{
+img.logo {
   padding-left: 20px;
   width: 100%;
-
 }
-div.datasearch{
+div.datasearch {
   width: 100%;
-
 }
 
-div.right_menu{ 
+div.right_menu {
   max-height: none;
   padding: 10px;
   background-color: rgb(250, 250, 250);
   border-left: 1px solid #dce0e0;
-  box-shadow: 0px 3px 2px 2px rgba(0,0,0,.05);
- }
- div.SearchResult{
-padding: 10px;
- }
+  box-shadow: 0px 3px 2px 2px rgba(0, 0, 0, 0.05);
+}
+div.SearchResult {
+  padding: 10px;
+}
 
- input.SearchBar{
+input.SearchBar {
   background: rgb(50, 50, 50);
- }
+}
 
-
-div.app{
+div.app {
   padding: 0px;
 }
 
-
-
-div.standard_title
-{
+div.standard_title {
   font-size: 16px;
   color: #5185f7;
   text-decoration: underline;
-  }
+}
 
-.desc1{
+.desc1 {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.desc1a {
   font-weight: bold;
   font-size: 17px;
-  }
+}
 
-.desc2{
+.desc2 {
   font-weight: bold;
   font-size: 16px;
-  text-indent:5px;
-  }
+  text-indent: 5px;
+}
 
-.desc3{
+.desc3 {
   font-weight: bold;
   font-size: 15px;
   text-indent: 10px;
-  }
+}
 
-.desc4{
+.desc4 {
   font-weight: bold;
   font-size: 14px;
   text-indent: 15px;
-  }
-
-.all_body
-{
-padding-top: 10px;
-display: flex;
 }
 
-.SearchResult
-{
+.all_body {
+  padding-top: 10px;
+  display: flex;
+}
+
+.SearchResult {
   flex: 10;
 }
-.right_menu{
+.right_menu {
   flex: 1;
   padding-left: 10px;
 }
 
-
-.filter ul 
-{ max-height: none }
+.filter ul {
+  max-height: none;
+}
 
 .app {
   display: grid;
@@ -110,7 +105,6 @@ display: flex;
   min-width: 250px;
   margin-top: 10px;
 }
-
 
 .item {
   padding: 10px;
